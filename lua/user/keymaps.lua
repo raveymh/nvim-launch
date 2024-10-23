@@ -26,13 +26,16 @@ vim.keymap.set({ "n", "v", "x", "o" }, "q", "<Nop>") -- stop macro
 vim.keymap.set({ "n", "v", "x" }, "+", "<C-a>", opts)
 vim.keymap.set({ "n", "v", "x" }, "_", "<C-x>", opts)
 vim.keymap.set("n", "<C-a>", "ggVG", opts) -- select all
-
 vim.keymap.set({ "n", "v" }, "<C-d>", "}")
 vim.keymap.set({ "n", "v" }, "<C-u>", "{")
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to upper window" })
+vim.keymap.set("n", "J", "<C-d>", opts)
+vim.keymap.set("n", "K", "<C-u>", opts)
+vim.keymap.set("n", "<BS>", ":b#<CR>", { silent = true })
+vim.keymap.set("n", "<CR>", "za", opts)
 
 -- mousemenu
 vim.cmd([[:amenu 10.100 mousemenu.Goto\ Definition <cmd>lua vim.lsp.buf.definition()<CR>]])
