@@ -4,8 +4,6 @@ local M = {
 		"folke/tokyonight.nvim",
 	},
 }
-local navic = require("user.navic")
-local date_time = os.date("%a")
 
 function M.config()
 	require("lualine").setup({
@@ -14,7 +12,7 @@ function M.config()
 			icons_enabled = true,
 			ignore_focus = {},
 			disabled_filetypes = {
-				statusline = {"alpha", "lazygit"},
+				statusline = { "alpha", "lazygit" },
 				winbar = {},
 			},
 			always_divide_middle = true,
@@ -24,7 +22,7 @@ function M.config()
 			lualine_b = { "branch", "diff", "diagnostics" },
 			lualine_c = { "" },
 			lualine_x = { "" },
-			lualine_y = { "encoding", "filetype" },
+			lualine_y = { "progress", "filetype" },
 			lualine_z = { { "os.date('%I:%M %p')" } },
 		},
 		inactive_winbar = {},

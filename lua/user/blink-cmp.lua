@@ -31,11 +31,11 @@ function M.config()
 			},
 		},
 		windows = {
-			autocomplete = { border = "single" },
+			autocomplete = { border = "rounded" },
 			documentation = {
-				border = "single",
+				border = "rounded",
 				autoshow = true,
-				auto_show_delay_ms = 500,
+				auto_show_delay_ms = 250,
 				update_delay_ms = 50,
 			},
 		},
@@ -44,7 +44,8 @@ function M.config()
 		},
 		nerd_font_variant = "mono",
 	})
-	-- vim.api.nvim_set_hl()
+	vim.api.nvim_set_hl(0, "BlinkCmpLabel", { link = "CmpItemMenu" })
+	vim.api.nvim_set_hl(0, "BlinkCmpMenu", { link = "CmpItemMenu" })
 end
 
 return M
