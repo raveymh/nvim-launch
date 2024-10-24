@@ -19,7 +19,15 @@ function M.config()
 		{ "<leader>l", group = "LSP", icon = icons.ui.Code },
 		{ "<leader>d", group = "Debug" },
 		{ "<leader>k", group = "Test" },
-		{ "<leader>p", group = "Plugins" },
+		{
+			"<leader>o",
+			group = "Godot",
+			icon = require("nvim-web-devicons").get_icon("godot", ".gd", { default = true }),
+		},
+		{
+			{ "<leader>ol", desc = "Lint", icon = icons.ui.Pencil },
+			{ "<leader>oo", desc = "Code Order", icon = icons.ui.Note },
+		},
 		{ "<leader>t", group = "Tabs" },
 		{
 			{ "<leader>tn", "<cmd>$tabnew<cr>", desc = "New Empty Tab" },

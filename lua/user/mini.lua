@@ -23,7 +23,7 @@ function M.config()
 	})
 	require("mini.indentscope").setup({
 		draw = {
-			animation = require("mini.indentscope").gen_animation.linear({ duration = 50, unit = "total" }),
+			animation = require("mini.indentscope").gen_animation.linear({ duration = 35, unit = "total" }),
 		},
 		options = { try_as_border = true },
 

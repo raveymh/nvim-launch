@@ -1,5 +1,10 @@
-vim.keymap.set({ "n" }, "<leader>pl", "<cmd>!gdlint %<CR>", { desc = "gdlint" })
+vim.keymap.set({ "n" }, "<leader>ol", "<cmd>!gdlint %<CR>", { desc = "Lint list" })
 vim.opt_local.foldmethod = "expr"
+
+vim.keymap.set({ "n" }, "<leader>oa", "<cmd>GodotRunLast<CR>", { desc = "Run last scene" })
+vim.keymap.set({ "n" }, "<leader>or", "<cmd>GodotRun<CR>", { desc = "Run default scene" })
+vim.keymap.set({ "n" }, "<leader>oe", "<cmd>GodotRunCurrent<CR>", { desc = "Run current scene" })
+vim.keymap.set({ "n" }, "<leader>os", "<cmd>GodotRunFZF<CR>", { desc = "Run select scene" })
 
 -- NOTE: Display code order from style guide
 -- Display window reference
@@ -66,4 +71,4 @@ function DisplayCodeOrder()
 end
 
 vim.api.nvim_create_user_command("DisplayCodeOrder", DisplayCodeOrder, {})
-vim.keymap.set({ "n", "v" }, "<leader>o", "<cmd>DisplayCodeOrder<CR>", { desc = "Display Code [o]rder" })
+vim.keymap.set({ "n", "v" }, "<leader>oo", "<cmd>DisplayCodeOrder<CR>", { desc = "Code order" })

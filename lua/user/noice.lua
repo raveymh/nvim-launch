@@ -70,6 +70,15 @@ function M.config()
 			},
 		},
 	})
+
+	local wk = require("which-key")
+	wk.add({
+		{ "<leader>n", group = "Noice" },
+		{ "<leader>nm", "<cmd>Noice<cr>", desc = "Messages" },
+		{ "<leader>ne", "<cmd>NoiceErrors<cr>", desc = "Errors" },
+		{ "<leader>nl", "<cmd>NoiceLast<cr>", desc = "Last message" },
+		{ "<leader>np", "<cmd>NoicePick<cr>", desc = "Pick message" },
+	})
 end
 
 return M
