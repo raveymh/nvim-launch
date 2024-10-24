@@ -7,8 +7,8 @@ function M.config()
 	require("mini.bracketed").setup()
 	require("mini.move").setup()
 	require("mini.surround").setup()
-	require("mini.notify").setup({ lsp_progress = { enable = true } })
-	require("mini.operators").setup()
+	-- require("mini.notify").setup({ lsp_progress = { enable = true } })
+	-- require("mini.operators").setup()
 	require("mini.icons").setup()
 	require("mini.hipatterns").setup({
 		highlighters = {
@@ -42,24 +42,24 @@ function M.config()
 			end,
 		}),
 	})
-	require("mini.completion").setup({
-		delay = {
-			completion = 10000000,
-			signature = 100,
-		},
-		window = {
-			info = {
-				border = "single",
-			},
-			signature = {
-				border = "rounded",
-			},
-		},
-
-		lsp_completion = {
-			auto_setup = false,
-		},
-	})
+	-- require("mini.completion").setup({
+	-- 	delay = {
+	-- 		completion = 10000000,
+	-- 		signature = 100,
+	-- 	},
+	-- 	window = {
+	-- 		info = {
+	-- 			border = "single",
+	-- 		},
+	-- 		signature = {
+	-- 			border = "rounded",
+	-- 		},
+	-- 	},
+	--
+	-- 	lsp_completion = {
+	-- 		auto_setup = false,
+	-- 	},
+	-- })
 	-- require("mini.pairs").setup()
 	-- require("mini.tabline").setup()
 	require("mini.extra").setup()

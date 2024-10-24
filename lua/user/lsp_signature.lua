@@ -1,21 +1,32 @@
-return {
+local M = {
 	"ray-x/lsp_signature.nvim",
-	event = "VeryLazy",
-	opts = {
-		bind = true,
-		floating_window = false,
-		floating_window_above_cur_line = false,
-		hint_prefix = "•",
-		hint_scheme = "Identifier",
-		handler_opts = {
-			border = "rounded",
-		},
-	},
-	config = function(_, opts)
-		require("lsp_signature").setup(opts)
-	end,
-
-	vim.keymap.set({ "n", "i" }, "<C-n>", function()
-		require("lsp_signature").toggle_float_win()
-	end, { silent = true, noremap = true, desc = "Toggle signature" }),
 }
+
+function M.config()
+	local icons = require("user.icons")
+	local cfg = {
+		debug = true,
+		log_path = vim.fn.stdpath("cache") .. "/lsp_signature.log",
+		bind = true,
+		max_height = 6,
+		max_width = 80,
+		floating_window = false,
+		close_timeout = 0,
+		hint_enable = true,
+		hint_prefix = " " .. icons.ui.Lightbulb,
+		hint_scheme = "Comment",
+		auto_close_after = 5,
+		handler_opts = { border = "rounded" },
+	}
+	require("lsp_signature").setup(cfg)
+
+	vim.keymap.set({ "n", "i" }, "<C-g>", function()
+		require("lsp_signature").toggle_float_win()
+	end, { silent = true, noremap = true, desc = "Toggle signature window" })
+
+	vim.keymap.set({ "n" }, "<Leader>ls", function()
+		vim.lsp.buf.signature_help()
+	end, { silent = true, noremap = true, desc = "Toggle signature help" })
+end
+
+return M

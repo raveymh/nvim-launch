@@ -13,7 +13,7 @@ function M.config()
 			-- 	return require("which-key.extras").expand.buf()
 			-- end,
 		},
-	    { "<leader>f", group = "Find" , icon = icons.ui.Telescope},
+		{ "<leader>f", group = "Find", icon = icons.ui.Telescope },
 		{ "<leader>g", group = "Git" },
 		{ "<leader>gt", group = "Toggle" },
 		{ "<leader>l", group = "LSP", icon = icons.ui.Code },
@@ -29,10 +29,9 @@ function M.config()
 			{ "<leader>tl", "<cmd>tabprev<cr>", desc = "Prev Tab" },
 		},
 		{ "<leader>T", group = "Treesitter" },
-		{ "<leader>e", desc = "Harpoon menu", icon = "" },
 		{ "<leader>w", proxy = "<c-w>", group = "Windows" },
 		{ "<leader>q", "<cmd>confirm q<CR>", desc = "Quit" },
-		{ "<leader>;", "<cmd>tabnew | terminal<CR>", desc = "Term" },
+		-- { "<leader>;", "<cmd>tabnew | terminal<CR>", desc = "Terminal" },
 
 		{ "gd", desc = "Go to Definition", icon = "" },
 		{ "gD", desc = "Go to Declaration", icon = "" },
