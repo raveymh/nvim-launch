@@ -113,6 +113,10 @@ function M.config()
 		vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
 	require("lspconfig.ui.windows").default_options.border = "rounded"
 
+	require("neodev").setup({
+		library = { plugins = { "nvim-dap-ui" }, types = true },
+	})
+
 	for _, server in pairs(servers) do
 		local opts = {
 			on_attach = M.on_attach,
@@ -122,10 +126,6 @@ function M.config()
 		local require_ok, settings = pcall(require, "user.lspsettings." .. server)
 		if require_ok then
 			opts = vim.tbl_deep_extend("force", settings, opts)
-		end
-
-		if server == "lua_ls" then
-			require("neodev").setup({})
 		end
 
 		lspconfig[server].setup(opts)
