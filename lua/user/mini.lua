@@ -10,17 +10,6 @@ function M.config()
 	-- require("mini.notify").setup({ lsp_progress = { enable = true } })
 	-- require("mini.operators").setup()
 	require("mini.icons").setup()
-	require("mini.hipatterns").setup({
-		highlighters = {
-			fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
-			hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
-			todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
-			note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
-
-			-- Highlight hex color strings (`#rrggbb`) using that color
-			hex_color = require("mini.hipatterns").gen_highlighter.hex_color(),
-		},
-	})
 	require("mini.indentscope").setup({
 		draw = {
 			animation = require("mini.indentscope").gen_animation.linear({ duration = 35, unit = "total" }),

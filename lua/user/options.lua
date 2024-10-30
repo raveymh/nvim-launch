@@ -35,7 +35,7 @@ vim.opt.wrap = false -- display lines as one long line
 vim.opt.scrolloff = 15
 vim.opt.sidescrolloff = 8
 vim.opt.hlsearch = false
-vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
+-- vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
 vim.opt.fillchars = vim.opt.fillchars + "eob: "
 vim.opt.fillchars:append({
 	stl = " ",

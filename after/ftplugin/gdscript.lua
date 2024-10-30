@@ -1,9 +1,10 @@
-vim.keymap.set({ "n" }, "<leader>ol", "<cmd>!gdlint %<CR>", { desc = "Lint list" })
 vim.opt_local.foldmethod = "expr"
 
-vim.keymap.set({ "n" }, "<leader>oa", "<cmd>GodotRunLast<CR>", { desc = "Run last scene" })
+vim.keymap.set("n", "<leader>ol", "<cmd>!gdlint %<CR>", { desc = "Lint" })
+vim.keymap.set("n", "<leader>oe", "<cmd>!godot -e -w --resolution 1440x900<CR>", { desc = "Launch editor" })
+vim.keymap.set({ "n" }, "<leader>o<leader>", "<cmd>GodotRunLast<CR>", { desc = "Run last scene" })
 vim.keymap.set({ "n" }, "<leader>or", "<cmd>GodotRun<CR>", { desc = "Run default scene" })
-vim.keymap.set({ "n" }, "<leader>oe", "<cmd>GodotRunCurrent<CR>", { desc = "Run current scene" })
+-- vim.keymap.set({ "n" }, "<leader>oc", "<cmd>GodotRunCurrent<CR>", { desc = "Run current scene" })
 vim.keymap.set({ "n" }, "<leader>os", "<cmd>GodotRunFZF<CR>", { desc = "Run select scene" })
 
 -- NOTE: Display code order from style guide
