@@ -20,7 +20,7 @@ function M.config()
 	}
 	require("lsp_signature").setup(cfg)
 
-	vim.keymap.set({ "n", "i" }, "<C-g>", function()
+	vim.keymap.set({ "n", "i" }, "<F3>", function()
 		require("lsp_signature").toggle_float_win()
 	end, { silent = true, noremap = true, desc = "Toggle signature window" })
 

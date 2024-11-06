@@ -19,14 +19,14 @@ return {
 		vim.api.nvim_create_autocmd("LspAttach", {
 			callback = function(event)
 				local opts = { buffer = event.buf }
-				vim.keymap.set("n", "<F3>", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
+				vim.keymap.set("n", "gh", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
 				vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<cr>", opts)
 				vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
 				vim.keymap.set("n", "gi", "<cmd>Telescope implementations<cr>", opts)
 				vim.keymap.set("n", "go", "<cmd>Telescope type_definitions<cr>", opts)
 				vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
 				vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)
-				vim.keymap.set({ "n", "i" }, "<C-g>", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
+				vim.keymap.set({ "n", "i" }, "<F3>", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
 				vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 				-- vim.keymap.set("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 				-- vim.keymap.set("n", "<leader>ll", "<cmd>lua vim.lsp.buf.codelens.run()<cr>", opts)

@@ -20,7 +20,7 @@ function M.config()
 		{ "<leader>fg", desc = "Grep working directory", icon = icons.ui.Search },
 		{ "<leader>fr", desc = "Recent files", icon = icons.ui.FindFile },
 		{ "<leader>f'", desc = "Registers", icon = icons.ui.Table },
-		{ "<leader>f<leader>", desc = "Buffers", icon = icons.ui.Files },
+		{ "<leader>fb", desc = "Buffers", icon = icons.ui.Files },
 		{ "<leader>fn", desc = "Nvim config", icon = icons.ui.Gear },
 		{ "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps", icon = icons.misc.CircuitBoard },
 		-- { "<leader>fp", "<cmd>Telescope projects<CR>", desc = "Projects", icon = icons.git.Repo },
@@ -161,7 +161,7 @@ function M.config()
 	vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Grep working directory" })
 	-- vim.keymap.set("n", "<leader>fk", builtin.keymaps, { desc = "Keymaps" })
 	vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Recently opened files" })
-	vim.keymap.set("n", "<leader>f<leader>", builtin.buffers, { desc = "Buffers" })
+	vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
 	vim.keymap.set("n", "<leader>f'", builtin.registers, { desc = "Registers" })
 	-- Shortcut for searching your Neovim configuration files
 	vim.keymap.set("n", "<leader>fn", function()
