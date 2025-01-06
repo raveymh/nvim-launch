@@ -31,6 +31,7 @@ function M.config()
 			end,
 		}),
 	})
+	require("mini.sessions").setup()
 	-- require("mini.completion").setup({
 	-- 	delay = {
 	-- 		completion = 10000000,
