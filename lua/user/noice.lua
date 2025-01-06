@@ -20,7 +20,7 @@ function M.config()
 				["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
 			},
 			signature = {
-				enabled = true,
+				enabled = false,
 				auto_open = {
 					trigger = true,
 				},
