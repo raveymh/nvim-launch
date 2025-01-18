@@ -22,7 +22,7 @@ vim.keymap.set({ "n", "i" }, "<C-s>", "<Esc><cmd>w<CR>", opts)
 vim.keymap.set({ "n", "v" }, "zs", ":%s@", opts)
 vim.keymap.set({ "v", "x" }, "zS", ":s@", opts)
 vim.keymap.set("n", "<C-f>", "/", opts)
-vim.keymap.set({ "n", "v", "x", "o" }, "q", "<Nop>") -- stop macro
+-- vim.keymap.set({ "n", "v", "x", "o" }, "q", "<Nop>") -- stop macro
 vim.keymap.set({ "n", "v", "x" }, "+", "<C-a>", opts)
 vim.keymap.set({ "n", "v", "x" }, "_", "<C-x>", opts)
 vim.keymap.set("n", "<C-a>", "ggVG", opts) -- select all
